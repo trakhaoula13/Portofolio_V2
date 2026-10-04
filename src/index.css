@@ -1068,3 +1068,131 @@ section[id] {
 .nav-link-ico:hover svg {
     transform: translateY(-2px) scale(1.15);
 }
+
+
+/* =====================================================
+   PAGES DÉTAIL PROJET : 4 sections cohérentes
+   ===================================================== */
+
+.detail-card {
+    height: 100%;
+}
+
+.detail-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.detail-head h5 {
+    margin: 0;
+    font-size: 1.05rem;
+    flex: 1;
+}
+
+.detail-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: var(--cyan-dim);
+    color: var(--cyan);
+    flex-shrink: 0;
+}
+
+.detail-icon {
+    color: var(--cyan);
+    opacity: 0.8;
+}
+
+.detail-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 700;
+    color: var(--cyan);
+    margin-bottom: 4px;
+}
+
+.detail-list {
+    padding-left: 1.1rem;
+    margin: 0;
+    color: var(--slate);
+}
+
+.detail-list li {
+    margin-bottom: 8px;
+}
+
+.detail-list li::marker {
+    color: var(--cyan);
+}
+
+
+/* Résultats & validation : mise en avant */
+
+.result-highlight {
+    border: 1.5px solid var(--cyan);
+    background: linear-gradient(180deg, rgba(0, 180, 216, 0.08), var(--surface) 70%);
+    box-shadow: 0 10px 30px rgba(0, 180, 216, 0.12);
+}
+
+.result-highlight .detail-num {
+    background: var(--cyan);
+    color: #fff;
+}
+
+.result-highlight .detail-list {
+    color: var(--heading);
+}
+
+
+/* =====================================================
+   PAGINATION DES PROJETS
+   ===================================================== */
+
+.pagination-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2.5rem;
+}
+
+.page-btn {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--heading);
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.page-btn:hover:not(:disabled):not(.active) {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    transform: translateY(-2px);
+}
+
+.page-btn.active {
+    background: var(--cyan);
+    border-color: var(--cyan);
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(0, 180, 216, 0.35);
+}
+
+.page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
