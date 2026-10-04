@@ -136,4 +136,11 @@ const projectsData = [{
     },
 ];
 
-export default projectsData;
+// Ordre d'affichage (liste des ids). Pour changer l'ordre, modifiez uniquement cette liste.
+const displayOrder = [1, 6, 4, 7, 2, 8, 9, 3, 10, 5];
+
+const orderedProjects = displayOrder
+    .map((id) => projectsData.find((p) => p.id === id))
+    .concat(projectsData.filter((p) => displayOrder.indexOf(p.id) === -1));
+
+export default orderedProjects;
