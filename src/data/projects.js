@@ -16,6 +16,7 @@ import pfa from '/pfa.png';
 
 const projectsData = [{
         id: 1,
+        category: 'robotics',
         image: robot,
         techs: ['MATLAB', 'Simulink', 'DHM'],
         code: null,
@@ -28,6 +29,7 @@ const projectsData = [{
     },
     {
         id: 2,
+        category: 'power',
         image: cem,
         techs: ['LTspice', 'MATLAB', 'Python', 'SPICE'],
         code: null,
@@ -40,6 +42,7 @@ const projectsData = [{
     },
     {
         id: 3,
+        category: 'rf',
         image: olr,
         techs: ['CST Studio'],
         code: null,
@@ -52,6 +55,7 @@ const projectsData = [{
     },
     {
         id: 4,
+        category: 'embedded',
         image: pfe,
         techs: ['Python', 'Tkinter', 'IoT'],
         code: null,
@@ -64,6 +68,7 @@ const projectsData = [{
     },
     {
         id: 5,
+        category: 'embedded',
         image: pfa,
         techs: ['Python', 'Linux embarqué', 'TFTP', 'Pylint', 'GitLab'],
         code: null,
@@ -76,6 +81,7 @@ const projectsData = [{
     },
     {
         id: 6,
+        category: 'ai',
         image: cnn,
         techs: ['Python', 'Scikit-learn', 'TensorFlow/Keras'],
         code: null,
@@ -88,6 +94,7 @@ const projectsData = [{
     },
     {
         id: 7,
+        category: 'rf',
         image: ofdm,
         techs: ['MATLAB', 'Simulink', 'OFDM'],
         code: null,
@@ -100,6 +107,7 @@ const projectsData = [{
     },
     {
         id: 8,
+        category: 'power',
         image: pv,
         techs: ['MATLAB/Simulink', 'MPPT', 'Boost converter'],
         code: null,
@@ -112,6 +120,7 @@ const projectsData = [{
     },
     {
         id: 9,
+        category: 'rf',
         image: fd,
         techs: ['FDTD 3D', 'Schéma de Yee', 'Micro-ruban'],
         code: null,
@@ -124,6 +133,7 @@ const projectsData = [{
     },
     {
         id: 10,
+        category: 'rf',
         image: patch,
         techs: ['CST Studio', 'Antennes', 'Microstrip'],
         code: null,
@@ -134,6 +144,20 @@ const projectsData = [{
         },
         pdf: { fr: '/Rapport_Antenne__Étude_Comparative_entre_Patch_Rectangulaire_et_Circulaire.pdf', en: null },
     },
+];
+
+// Categories du filtre de la section Projets. Chaque projet a un champ `category`
+// qui reprend l'un de ces `id`. L'ordre ci-dessous est l'ordre d'affichage des pilules ;
+// une categorie sans projet n'est pas affichee. Pour en ajouter une : l'ajouter ici,
+// puis mettre son id dans le champ `category` des projets concernes.
+export const projectAllLabel = { fr: 'Tous', en: 'All' };
+
+export const projectCategories = [
+    { id: 'robotics', label: { fr: 'Robotique et commande', en: 'Robotics and control' } },
+    { id: 'power', label: { fr: 'Électronique de puissance et énergie', en: 'Power electronics and energy' } },
+    { id: 'rf', label: { fr: 'RF, antennes et télécoms', en: 'RF, antennas and telecom' } },
+    { id: 'embedded', label: { fr: 'IoT et systèmes embarqués', en: 'IoT and embedded systems' } },
+    { id: 'ai', label: { fr: 'IA et données', en: 'AI and data' } },
 ];
 
 // Ordre d'affichage (liste des ids). Pour changer l'ordre, modifiez uniquement cette liste.
