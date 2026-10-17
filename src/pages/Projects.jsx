@@ -7,7 +7,7 @@ import projectsData, { projectCategories, projectAllLabel } from '../data/projec
 import { getReportPath, hasReportIn } from '../utils/files';
 
 const colors = ['#00b4d8', '#2ecc71', '#9b59b6', '#f39c12'];
-const PER_PAGE = 8;
+const PER_PAGE = 4;
 
 // Catégories qui ont au moins un projet (une pilule vide n'est jamais affichée)
 const availableCategories = projectCategories.filter((c) => projectsData.some((p) => p.category === c.id));
